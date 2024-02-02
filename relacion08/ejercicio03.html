@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script src="js/ejercicio03.js"></script>
+</head>
+
+<body>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre"><br><br>
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad"><br><br>
+    <label for="salarioBase">Salario Base:</label>
+    <input type="number" id="salarioBase"><br><br>
+    <button onclick="calcularSalarioFinal()">Calcular Salario Final</button><br><br>
+    <div id="salario" style="display: none;">
+        <label for="salarioFinal">Salario Final:</label>
+        <input type="number" id="salarioFinal" readonly>
+    </div>
+</body>
+
+</html>

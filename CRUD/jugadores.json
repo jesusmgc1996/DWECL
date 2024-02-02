@@ -1,0 +1,36 @@
+{
+  "jugadores": [
+    {
+      "nombre": "Lionel Messi",
+      "deporte": "fútbol",
+      "equipo": "Inter de Miami",
+      "posicion": "delantero",
+      "edad": "36",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Cristiano Ronaldo",
+      "deporte": "fútbol",
+      "equipo": "Al-Nassr Football Club",
+      "posicion": "delantero",
+      "edad": 38
+    },
+    {
+      "id": 3,
+      "nombre": "LeBron James",
+      "deporte": "baloncesto",
+      "equipo": "Los Angeles Lakers",
+      "posicion": "alero",
+      "edad": 39
+    },
+    {
+      "id": 4,
+      "nombre": "Kevin Durant",
+      "deporte": "baloncesto",
+      "equipo": "Phoenix Suns",
+      "posicion": "ala-pívot",
+      "edad": 35
+    }
+  ]
+}

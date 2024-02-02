@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2a</title>
+</head>
+
+<body>
+    <script>
+        var factura = {
+            empresa: {
+                nombre: "Empresa",
+                direccion: "Direccion",
+                telefono: "123456789",
+                nif: "A12345678",
+            },
+            cliente: {
+                numero: "1",
+                dni: "12345678A",
+                nombre: "Cliente",
+                domicilio: "Domicilio",
+                cp: "12345",
+                ciudad: "Ciudad",
+                provincia: "Provincia",
+            },
+            productos: [
+                {
+                    descripcion: "Producto 1",
+                    precio: 10.0,
+                    cantidad: 2,
+                },
+                {
+                    descripcion: "Producto 2",
+                    precio: 15.0,
+                    cantidad: 3,
+                },
+            ],
+            importeTotal: 0,
+            formaPago: "Tarjeta de crédito",
+
+            calcularImporteTotal: function () {
+                this.productos.forEach(producto => {
+                    this.importeTotal += producto.precio * producto.cantidad;
+                });
+            },
+
+            mostrarImporteTotal: function () {
+                document.write("Importe total: " + this.importeTotal);
+            },
+        };
+
+        factura.calcularImporteTotal();
+        factura.mostrarImporteTotal();
+    </script>
+</body>
+
+</html>

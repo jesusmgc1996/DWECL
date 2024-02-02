@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+    <script>
+        function esPalindromo(texto) {
+            var textoFormateado = texto.toLowerCase().replace(/\s/g, "");
+
+            var textoAlReves = textoFormateado.split("").reverse().join("");
+
+            if (textoFormateado === textoAlReves) {
+                return "La cadena de texto es un palíndromo.";
+            } else {
+                return "La cadena de texto no es un palíndromo.";
+            }
+        }
+
+        document.write(esPalindromo("Dabale arroz a la zorra el abad"));
+    </script>
+</body>
+
+</html>

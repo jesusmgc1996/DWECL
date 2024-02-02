@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script src="js/ejercicio1.js"></script>
+</head>
+
+<body>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+        <div id="errorNombre"></div>
+
+        <br><label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo">
+            <option value="">Seleccione su sexo</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select><br>
+        <div id="errorSexo"></div><br>
+
+        <button type="button" onclick="validarFormulario()">Enviar</button>
+    </form>
+</body>
+
+</html>

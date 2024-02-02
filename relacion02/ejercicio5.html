@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <script>
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+
+        var dni = prompt("Introduzca el DNI (sin letra):");
+        document.write("La letra correspondiente es " + letras[dni % 23]);
+
+        var dni = prompt("Introduzca el DNI (con letra):");
+        if (dni.charAt(8).toUpperCase() == letras[dni.slice(0, 8) % 23]) {
+            document.write("<br>El DNI es válido.");
+        } else {
+            document.write("<br>El DNI no es válido.");
+        }
+    </script>
+</body>
+
+</html>

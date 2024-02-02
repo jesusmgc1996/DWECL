@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD API REST AXIOS</title>
+</head>
+
+<body>
+    <h1>CRUD API REST AXIOS</h1>
+    <section class="crud">
+        <div>
+            <h2 class="crud-titulo">Agregar Jugador</h2>
+            <form class="crud-form">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <br>
+                <input type="text" name="deporte" placeholder="Deporte" required>
+                <br>
+                <input type="text" name="equipo" placeholder="Equipo" required>
+                <br>
+                <input type="text" name="posicion" placeholder="Posición" required>
+                <br>
+                <input type="text" name="edad" placeholder="Edad" required>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="hidden" name="id">
+            </form>
+        </div>
+        <div>
+            <h2>Ver Jugadores</h2>
+            <table class="crud-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Deporte</th>
+                        <th>Equipo</th>
+                        <th>Posición</th>
+                        <th>Edad</th>
+                        <th>Operaciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+    <template id="crud-template">
+        <tr>
+            <td class="nombre"></td>
+            <td class="deporte"></td>
+            <td class="equipo"></td>
+            <td class="posicion"></td>
+            <td class="edad"></td>
+            <td>
+                <button class="edit">Editar</button>
+                <button class="delete">Eliminar</button>
+            </td>
+        </tr>
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <script src="js/axios.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/ejercicio18.js"></script>
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="row">
+            <h2>Centro Educativo I.E.S. Marqués de Comares</h2>
+            <div class="col-6">
+                <form id="form1">
+                    <br><br>
+                    <h4>Matriculación en el ciclo de grado superior DAW</h4>
+                    <br>Apellidos: <input type="text" id="apellidos">
+                    Nombre: <input type="text" id="nombre"><br><br>
+                    Domicilio: <input type="text" id="domicilio"><br><br>
+                    Sexo: <input type="radio" name="sexo" value="Hombre"> Hombre
+                    <input type="radio" name="sexo" value="Mujer"> Mujer<br><br>
+                    Edad: <input type="number" name="edad" min="1" max="99"><br><br>
+                    Curso: <select id="cursoDAW">
+                        <option value="1">1º</option>
+                        <option value="2">2º</option>
+                    </select><br><br>
+                    Módulos en que se matricula:<br>
+                    <input type="checkbox" name="asignatura1" value="Entornos de desarrollo"> Entornos de desarrollo<br>
+                    <input type="checkbox" name="asignatura2" value="Bases de datos"> Bases de datos<br>
+                    <input type="checkbox" name="asignatura3" value="Programación"> Programación<br>
+                    <input type="checkbox" name="asignatura4" value="Implementación de sistemas operativos">
+                    Implementación de sistemas operativos<br>
+                    <input type="checkbox" name="asignatura5" value="Formación y orientación laboral"> Formación y
+                    orientación laboral<br>
+                    <input type="checkbox" name="asignatura6" value="Desarrollo web en Entorno Cliente"> Desarrollo web
+                    en Entorno Cliente<br>
+                    <input type="checkbox" name="asignatura7" value="Desarrollo Web en Entorno Servidor"> Desarrollo Web
+                    en Entorno Servidor<br>
+                    <input type="checkbox" name="asignatura8" value="Despliegue de aplicaciones Web"> Despliegue de
+                    aplicaciones Web<br>
+                    <input type="checkbox" name="asignatura9" value="Desarrollo de interfaces Web"> Desarrollo de
+                    interfaces Web<br>
+                    <input type="checkbox" name="asignatura10" value="Empresa e iniciativa emprendedora"> Empresa e
+                    iniciativa emprendedora<br><br>
+                    Observaciones:<br>
+                    <textarea id="observaciones" rows="6" cols="40"
+                        placeholder="Indique si tiene alguna observación..."></textarea><br><br>
+                    <button onclick="enviar(1)">Enviar</button>
+                    <input type="reset" value="Restablecer">
+                </form>
+            </div>
+            <div class="col-6">
+                <form id="form2">
+                    <br><br>
+                    <h4>Matriculación en el ciclo de grado medio SMR</h4>
+                    <br>Apellidos: <input type="text" id="apellidos">
+                    Nombre: <input type="text" id="nombre"><br><br>
+                    Domicilio: <input type="text" id="domicilio"><br><br>
+                    Sexo: <input type="radio" name="sexo" value="Hombre"> Hombre
+                    <input type="radio" name="sexo" value="Mujer"> Mujer<br><br>
+                    Edad: <input type="number" name="edad" min="1" max="99"><br><br>
+                    Curso: <select id="cursoSMR">
+                        <option value="1">1º</option>
+                        <option value="2">2º</option>
+                    </select><br><br>
+                    Módulos en que se matricula:<br>
+                    <input type="checkbox" name="asignatura1" value="Aplicaciones ofimáticas"> Aplicaciones
+                    ofimáticas<br>
+                    <input type="checkbox" name="asignatura2" value="Redes locales"> Redes locales<br>
+                    <input type="checkbox" name="asignatura3" value="Sistemas Operativos Monopuestos"> Sistemas
+                    Operativos Monopuestos<br>
+                    <input type="checkbox" name="asignatura4" value="Montaje y Mantenimiento de Equipos"> Montaje y
+                    Mantenimiento de Equipos<br>
+                    <input type="checkbox" name="asignatura5" value="Formación y orientación laboral"> Formación y
+                    orientación laboral<br>
+                    <input type="checkbox" name="asignatura6" value="Aplicaciones Web"> Aplicaciones Web<br>
+                    <input type="checkbox" name="asignatura7" value="Seguridad Informática"> Seguridad Informática<br>
+                    <input type="checkbox" name="asignatura8" value="Servicios en Red"> Servicios en Red<br>
+                    <input type="checkbox" name="asignatura9" value="Sistemas Operativos en Red"> Sistemas Operativos en
+                    Red<br>
+                    <input type="checkbox" name="asignatura10" value="Empresa e iniciativa emprendedora"> Empresa e
+                    iniciativa emprendedora<br><br>
+                    Observaciones:<br>
+                    <textarea id="observaciones" rows="6" cols="40"
+                        placeholder="Indique si tiene alguna observación..."></textarea><br><br>
+                    <button onclick="enviar(2)">Enviar</button>
+                    <input type="reset" value="Restablecer">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

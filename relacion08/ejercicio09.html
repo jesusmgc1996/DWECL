@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+    <script src="js/ejercicio09.js"></script>
+</head>
+
+<body>
+    <h2>Conversor de Distancia</h2>
+    <label for="km">Kilómetros:</label>
+    <input type="number" id="km" oninput="limpiar('m')"><br>
+    <label for="m">Metros:</label>
+    <input type="number" id="m" oninput="limpiar('km')"><br><br>
+    <button onclick="convertirDistancia()">Convertir Distancia</button>
+    <h2>Conversor de Peso</h2>
+    <label for="kg">Kilogramos:</label>
+    <input type="number" id="kg" oninput="limpiar('g')"><br>
+    <label for="g">Gramos:</label>
+    <input type="number" id="g" oninput="limpiar('kg')"><br><br>
+    <button onclick="convertirPeso()">Convertir Peso</button>
+</body>
+
+</html>

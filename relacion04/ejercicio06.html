@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+    <script>
+        function vocalConsonante(cadena) {
+            const vocales = 'aeiou';
+            const consonantes = 'bcdfghjklmnpqrstvwxyz';
+            var numVocales = 0;
+            var numConsonantes = 0;
+            cadena = cadena.toLowerCase();
+            for (var i = 0; i < cadena.length; i++) {
+                if (vocales.includes(cadena.charAt(i))) {
+                    numVocales++;
+                }
+                else if (consonantes.includes(cadena.charAt(i))) {
+                    numConsonantes++;
+                }
+            }
+            return "Vocales: " + numVocales + ", Consonantes: " + numConsonantes;
+        }
+
+        document.write(vocalConsonante("Hola Mundo"));
+    </script>
+</body>
+
+</html>

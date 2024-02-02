@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <script>
+        function obtenerDia(dia) {
+            var dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            return dias[dia];
+        }
+
+        function obtenerMes(mes) {
+            var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            return meses[mes];
+        }
+
+        function obtenerCuatrimestre(mes) {
+            if (mes >= 1 && mes <= 4) {
+                return "primer";
+            } else if (mes >= 5 && mes <= 8) {
+                return "segundo";
+            } else {
+                return "tercer";
+            }
+        }
+
+        var fecha = new Date();
+        var mes = obtenerMes(fecha.getMonth());
+
+        document.write("Estamos en el día " + obtenerDia(fecha.getDay()) + " del mes " + mes + " del " + obtenerCuatrimestre(mes) + " cuatrimestre del año " + fecha.getFullYear());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2a</title>
+</head>
+
+<body>
+  <script>
+    var contarVecesCadenaEnTexto = (subcadena, cadena) => {
+      var cont = 0;
+      var index = cadena.indexOf(subcadena);
+      while (index !== -1) {
+        index = cadena.indexOf(subcadena, index + 1);
+        cont++;
+      }
+      return cont;
+    };
+
+    var num = contarVecesCadenaEnTexto("estoy", "estoy en el parque porque estoy aburrido");
+    document.write("La subcadena se repite " + num + " veces.");
+  </script>
+</body>
+
+</html>

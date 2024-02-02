@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+    <script>
+        class Pelicula {
+            constructor(id, titulo, director, anioEstreno, paisesOrigen, generos, calificacion) {
+                if (/^([A-Z, a-z]{2}\d{7})$/.test(id)) {
+                    this.id = id;
+                } else {
+                    throw new Error("El formato del ID es incorrecto. Debe tener 2 letras seguidas de 7 números.");
+                }
+
+                if (titulo.length <= 100) {
+                    this.titulo = titulo;
+                } else {
+                    throw new Error("El título no puede superar los 100 caracteres.");
+                }
+
+                this.director = director;
+
+                if (/^\d{4}$/.test(anioEstreno)) {
+                    this.anioEstreno = anioEstreno;
+                } else {
+                    throw new Error("El año de estreno debe ser un número entero de 4 dígitos.");
+                }
+
+                if (Array.isArray(paisesOrigen)) {
+                    this.paisesOrigen = paisesOrigen;
+                } else {
+                    throw new Error("Los países de origen deben ser introducidos en forma de array.");
+                }
+
+                if (Array.isArray(generos)) {
+                    generos.forEach(genero => {
+                        if (Pelicula.getGenerosAceptados().includes(genero)) {
+                            this.generos = generos;
+                        } else {
+                            throw new Error("El género " + genero + "no es válido.");
+                        }
+                    })
+                } else {
+                    throw new Error("Los géneros deben ser introducidos en forma de array.");
+                }
+                
+                this.calificacion = calificacion;
+            }
+
+            static getGenerosAceptados() {
+                return [
+                    'Action', 'Adult', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime',
+                    'Documentary', 'Drama', 'Family', 'Fantasy', 'Film Noir', 'Game-Show', 'History',
+                    'Horror', 'Musical', 'Music', 'Mystery', 'News', 'Reality-TV', 'Romance', 'Sci-Fi',
+                    'Short', 'Sport', 'Talk-Show', 'Thriller', 'War', 'Western'
+                ];
+            }
+
+            obtenerFichaTecnica() {
+                return "ID: " + this.id + "\nTítulo: " + this.titulo + "\nDirector: " + this.director + "\nAño de Estreno: " + this.anioEstreno +
+                    "\nPaíses de Origen: " + this.paisesOrigen.join(', ') + "\nGéneros: " + this.generos.join(', ') + "\nCalificación: " + this.calificacion;
+            }
+        }
+
+        const peliculas = [
+            { id: "Ab1234567", titulo: "Titanic", director: "James Cameron", anioEstreno: "1997", paisesOrigen: ["Estados Unidos", "Canadá"], generos: ["Drama", "Romance"], calificacion: 9.5 },
+            { id: "Cd9876543", titulo: "Avatar", director: "James Cameron", anioEstreno: "2009", paisesOrigen: ["Estados Unidos"], generos: ["Action", "Adventure", "Sci-Fi"], calificacion: 8.7 },
+            { id: "Ef5678901", titulo: "Toy Story", director: "John Lasseter", anioEstreno: "1995", paisesOrigen: ["Estados Unidos"], generos: ["Animation", "Comedy"], calificacion: 8.3 }
+        ];
+
+        peliculas.forEach(item => {
+            var pelicula = new Pelicula(
+                item.id,
+                item.titulo,
+                item.director,
+                item.anioEstreno,
+                item.paisesOrigen,
+                item.generos,
+                item.calificacion
+            );
+            console.log(pelicula.obtenerFichaTecnica());
+        });
+    </script>
+</body>
+
+</html>

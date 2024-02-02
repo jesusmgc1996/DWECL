@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <script>
+        function calcularAniosPasados(fecha) {
+            var milisegundosPorAnio = 1000 * 60 * 60 * 24 * 365.25;
+            return Math.floor((new Date() - fecha) / milisegundosPorAnio);
+        }
+
+        var anios = calcularAniosPasados(new Date('1996-10-28'));
+        document.write("Han pasado " + anios + " años.");
+    </script>
+</body>
+
+</html>

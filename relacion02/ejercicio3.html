@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <script>
+        var multiplos = [];
+        var suma = 0;
+        
+        for (var i = 11; i < 3000; i += 11) {
+            multiplos.push(i);
+        }
+        document.write("Los números son: " + multiplos);
+
+        multiplos.forEach(num => {
+            suma += num;
+        });
+        document.write("<br>La suma de los números es " + suma);
+    </script>
+</body>
+
+</html>

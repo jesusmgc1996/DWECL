@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+    <script>
+        function verificarCadena(texto) {
+            var mayus = texto.toUpperCase();
+            var minus = texto.toLowerCase();
+
+            if (texto === mayus) {
+                return "La cadena de texto solo contiene mayúsculas.";
+            }
+            else if (texto === minus) {
+                return "La cadena de texto solo contiene minúsculas.";
+            }
+            else {
+                return "La cadena de texto contiene mayúsculas y minúsculas.";
+            }
+        }
+
+        document.write(verificarCadena("MayúsculasYMinúsculas"));
+    </script>
+</body>
+
+</html>

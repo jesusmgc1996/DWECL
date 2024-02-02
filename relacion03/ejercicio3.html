@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <script>
+        class Circulo {
+            constructor(radio) {
+                this.radio = radio;
+            }
+            calcularArea() {
+                return Math.PI * Math.pow(this.radio, 2);
+            }
+            calcularLongitud() {
+                return 2 * Math.PI * this.radio;
+            }
+        }
+
+        var circulo = new Circulo(5);
+
+        document.write("Radio: " + circulo.radio);
+        document.write("<br>Área: " + circulo.calcularArea());
+        document.write("<br>Longitud: " + circulo.calcularLongitud());
+    </script>
+</body>
+
+</html>

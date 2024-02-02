@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gestión Material Deportivo</title>
+    <script src="js/ejercicio1.js"></script>
+    <style>
+        input[type=number] {
+            width: 50px;
+        }
+
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Gestión Material Deportivo IES Marqués de Comares</h1>
+        <hr>
+        <form id="identificacion" action="#" method="post">
+            <h2>Identificación:</h2><br>
+            <label for="profesor">Profesor</label>
+            <input type="text" id="profesor"><br>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password"><br>
+            <input type="button" value="Acceder" onclick="validarDatos()">
+            <p></p>
+        </form>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <h2>Gestión Repuestos Deportivos</h2>
+            </tr>
+            <tr>
+                <td>
+                    <form id="formulario" class="oculto" action="#" method="get">
+                        Deporte a gestionar:
+                        <select id="tipoDeporte">
+                            <option>Fútbol</option>
+                            <option>Baloncesto</option>
+                            <option>Gimnasia</option>
+                        </select><br><br><br>
+
+                        <div id="opcionesAdicionales" class="oculto">
+                        </div>
+
+                        <div id="materiales" class="oculto">
+                            <label>Materiales: </label><br>
+                            <input type="checkbox" name="aros" value="aros"> Aros<span>&nbsp;&nbsp;Unidades: <input
+                                    type="text"></span><br>
+                            <input type="checkbox" name="cinta" value="cintas"> Cintas<br>
+                            <input type="checkbox" name="pesas" value="pesas"> Pesas<br>
+                            <input type="checkbox" name="mancuernas" value="mancuernas"> Mancuernas<br>
+                            <br /> <br />
+                        </div>
+                        
+                        <input type="submit" value="Enviar" id="Enviar1">
+                        <input type="reset" id="Reset1" value="Limpiar">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
